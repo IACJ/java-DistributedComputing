@@ -1,0 +1,25 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=./src<homework_3_2_6{Example2ReceiverSender.java[Example2ReceiverSender"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="36"/>
+      <y="272"/>
+   </type>
+   <type>
+      <name="=./src<homework_3_2_6{Example2SenderReceiver.java[Example2SenderReceiver"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="372"/>
+      <y="272"/>
+   </type>
+   <type>
+      <name="=./src<homework_3_2_6{MyDatagramSocket.java[MyDatagramSocket"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="113"/>
+      <y="92"/>
+   </type>
+</uml>
+

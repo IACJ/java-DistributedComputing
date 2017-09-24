@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;homework_3_2_6/src&apos;&#x0D;&#x0A;- Original project: &apos;ch3_remake&apos;&#x0D;&#x0A;- Destination element: &apos;homework_3_2_6/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Example2ReceiverSender.java&#x0D;&#x0A;     Example2SenderReceiver.java&#x0D;&#x0A;     MyDatagramSocket.java" description="Copy compilation units" destination="=homework_3_2_6/src" element1="/src&lt;{Example2ReceiverSender.java" element2="/src&lt;{Example2SenderReceiver.java" element3="/src&lt;{MyDatagramSocket.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1506246433422" units="3" version="1.0"/>
+</session>

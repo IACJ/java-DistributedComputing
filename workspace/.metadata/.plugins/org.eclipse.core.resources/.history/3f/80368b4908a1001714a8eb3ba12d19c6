@@ -1,0 +1,15 @@
+package homework_2_2_4;
+
+public class ServerSock {
+
+	final int MAX_LEN = 100;
+	
+	public static void main(String[] args) {
+
+		System.out.print("ServerSock begin:");
+		
+		int port = Integer.parseInt("8888");
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package homework_2_2_4;
+
+public class ClientSock {
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

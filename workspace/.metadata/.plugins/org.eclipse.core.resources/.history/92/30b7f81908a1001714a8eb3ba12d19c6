@@ -1,0 +1,12 @@
+package homework_2_2_4;
+
+public class ServerSock {
+
+	public static void main(String[] args) {
+
+
+		int port = Integer.parseInt("8888");
+
+	}
+
+}
