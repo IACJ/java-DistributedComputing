@@ -1,5 +1,0 @@
-package homework_2_2_4;
-
-public class ClientSock {
-	int port = Integer.parseInt('8888');
-}

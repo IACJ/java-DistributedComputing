@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:defnitions name="PurchaseOrderService"
+	targetNamespace="http://supply.com/PurchaseService/wsdl"
+	xmlns:tns="http://supply.com/PurchaseService/wsdl"
+	xmlns:xsd="http://www.w3.org/2003/05/XMLSchema"
+	xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl">
+	<wsdl:types>
+		<wsdl:schema
+			targetnamespace="http://supply.com/PurchaseService/wsdl"
+			<xsd:complexType name="CustomerInfoType">
+				<xsd:sequence>
+					<xsd:element name="CusName" type="xsd:string"/>
+					<xsd:element name="CusAddress" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="POType">
+				<xsd:sequence>
+					<xsd:element name="PONumber" type="xsd:integer"/>
+					<xsd:element name="PODate" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="InvoiceType">
+				<xsd:all>
+					<xsd:element name="InvPrice" type="xsd:float"/>
+					<xsd:element name="InvDate" type="xsd:string"/>				
+				</xsd:all>
+			</xsd:complexType>
+		</wsdl:schema>
+	</wsdl:types>
+	<wsdl:message name="POMessage">
+		<wsdl:part name="PurchaseOrder" type="tns:POType"/>
+		<wsdl:part name="CustomerInfo" type="tns:CustomerInfoType"/>
+	</wsdl:message>
+	<wsdl:message name="InvMessage">
+		<wsdl:part name="Invoice" type="tns:InvoiceType"/>
+	</wsdl:message>
+	<wsdl:portType naem="PurchaseOrderPortType">
+		<wsdl:operation name="SendPurchase">
+			<wsdl:input message="tns:POMessage"/>
+			<wsdl:output message="tns:InvMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:defnitions>

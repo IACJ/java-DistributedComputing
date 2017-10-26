@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone=”yes”?>
+
+<Schema>
+	<ElementType name="Name" content="textOnly" dt:type="string" model="closed"/>
+	<ElementType name="Screen" content="textOnly" dt:type="float" model="closed"/>
+	<Elementtype name="CPU" content="textOnly" dt:type="string" model="closed"/>
+	<Elementtype name="OS" content="textOnly" dt:type="string" model="closed"/>
+	<Elementtype name="Camera" content="textOnly" dt:type="string" model="closed"/>
+	<Elementtype name="Battery" content="textOnly" dt:type="string" model="closed"/>
+	<Elementtype name="Price" content="textOnly" dt:type="float" model="closed"/>
+	<ElementType name="SmartPhone" content="textOnly" model="closed" order="seq">
+		<element type="Name"/>
+		<element type="Screen"/>
+		<element type="CPU"/>
+		<element type="OS"/>
+		<element type="Camera"/>
+		<element type="Battery"/>
+		<element type="Price"/>
+	</ElementType>
+</Schema>

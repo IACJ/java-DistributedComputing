@@ -1,0 +1,37 @@
+This is a set of files obtained from Wrox press.  They
+are some of the source files of the code shown in Chapter
+18 of the text book.
+
+The files are:
+   README           this file
+   Cookie.html      the web page which initiates the Cart servlet
+   Cart.java        source code for teh shopping cart servlet
+
+To try out the sample:
+ 1. Copy the files into a directory in your account.
+ 2. Modify the .html file to replace the URL for the servlet to
+    the URL for your servlet: you will have to change the host name
+    and the port number.
+ 3. File the .html file to the appropriate directory: on falcon, it
+    should be under <i>www/...</i>; on the America machines, it should be
+    under <i>~/public_html</i>.
+ 4. In the Cart.java file, make change to the URL redirected to at the
+    end of the program so that the redirection is to your servlet, e.g.,
+       res.sendRedirect("http://nebraska.calpoly.edu:8081/servlet/Cart");
+ 4. Compile the Cart.java file, and file the .class file in ~/servlets
+    on the America system you speicifed in the URL.
+ 5. Start the servlet runner on the America system specified in the
+    web page, at a port of your choice, like this:
+      %servletrunner -d /home/mliu/servlets -p 12345
+    (It is recommended that you make a run file to contain this command
+     and to use as a run script.)
+ 6. Access your web page and observe the update on the 
+    contents in the shopping cart.  See if you can follow the code and
+    explain to yourself what you observe.
+    
+***** If you make changes to a servlet, you must refile it in the 
+      designated directory.  You may have to stop the jswdk server and
+      restart it for the modified servlet to be invoked. ****
+  
+
+

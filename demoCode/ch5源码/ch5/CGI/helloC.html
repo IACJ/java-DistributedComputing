@@ -1,0 +1,32 @@
+<!Sample web page for illustrating CGI>
+<!Author: M. Liu, 9/15/01>
+<html>
+<head>
+<title>A web page which invokes a web script</title>
+</head>
+<body>
+
+<H1>This web page illustrates the use of a web script</H1>
+<P>
+<font color = green>
+This page contains an action tag which specifies a web script.
+Upon retrieving this page from the web server, the browser
+processes the contents and, when the SUBMIT button is pressed,
+requests the server to run the script or program specified
+with the action tag.  
+</font>
+<br>
+The script or program is either a run-script written in a script
+language such as Perl, or an executable generated from a source program
+written in a language such as C/C++.  
+</P>
+<HR>
+<form method="post" action="/cgi-bin/hello.cgi">
+<hr>
+Press <input type="submit" value="here"> to submit your query.
+</form>
+
+<hr>
+</body>
+</html>
+

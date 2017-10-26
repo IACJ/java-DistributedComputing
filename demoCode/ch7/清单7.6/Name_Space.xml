@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Schema targetNamespace="http://www.OnlineShop.com/info"
+		XMLns="http://www.w3.org/1999/XMLSchema"
+		XMLns:INFO="http://www.OnlineShop.com/info"
+		XMLns:proAera="http://www.Address.com/produceAera">
+	<import namespace="http://www.AddressStandard.org/produceAera"
+		SchemaLocation="http://www.AddressCN.org/produceAera.xsd"/>
+	<element name="productName" type="string"/>
+	<element name="productNum" type="String"/>
+	<element name="price" type="float"/>
+	<element name="produceAera type="proAera"/>
+</Schema>

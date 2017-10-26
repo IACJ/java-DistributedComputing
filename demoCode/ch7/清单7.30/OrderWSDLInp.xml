@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definition>
+	<import namespace="http://supply.com/PurchaseService/wsdl"
+	location="http://supply.com/PurchaseService/wsdl/PurchaseInterfase.wsdl"/>
+	<wssdl:binding name="PurchaseOrderSOAPBinding"
+				   type="tns:PurchaseOrderPortType">
+		<soapbind:binding style="rpc"
+					transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="SendPurchase">
+			<soapbind:operation
+				soapAction="http://supply.com/PurchaseServices/wsdl/SendPurchase"
+				style="rpc"/>
+			<wsdl:input>
+				<soapbind:body use="literal"
+					namsespace="http://supply.com/PurchaseService/wsdl"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soapbind:body use="literal"
+					namsespace="http://supply.com/PurchaseService/wsdl"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wssdl:binding>
+	<wsdl:service name="PurchseOrderService">
+		<wsdl:port name="PurchaseOrderPort"
+			binding="tns:PurchaseOrderSOAPBinding">
+			<soapbind:address 
+				location="http://supply.com:8080/PurchaseOrderService"/>
+			</wsdl:port>
+	</wsdl:service>
+</wsdl:definition>

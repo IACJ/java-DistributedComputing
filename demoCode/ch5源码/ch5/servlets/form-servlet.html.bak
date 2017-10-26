@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>A WEB FORM</title>
+</head>
+<body>
+<form  action="/FormServlet” method="post">
+what's your name?
+<input type="text" name="name" >
+<input type="submit" value="提交表单"/></form>
+</body>
+</html>

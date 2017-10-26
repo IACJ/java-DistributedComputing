@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML declaration -->
+
+<CustomerInfo>	<!-- XML root element -->
+	<Customer>	<!-- sub element of the root element -->
+		<Name>Josh</Name>	<!-- information of Customer -->
+		<Sex>male</Sex>
+		<Age>21</Age>
+		<Telephone>15656545988</Telephone>
+		<Address>
+			<Street>108 Nationality ST.</Street>
+			<City>WuHan</City>
+			<State_Province>HuBei</State_Province>
+			<PostalCode>430074</PostalCode>
+		</Address>
+	</Customer>
+	<Customer>
+		<Name>Lily</Name>
+		<Sex>female</Sex>
+		<Age>24</Age>
+		<Telephone>11541512326</Telephone>
+		<Address>
+			<Street>55 ZhongShan ST.</Street>
+			<City>GuangZhou</City>
+			<State_Province>GuangDong</State_Province>
+			<PostalCode>248589</PostalCode>
+		</Address>
+	</Customer>
+</CustomerInfo>

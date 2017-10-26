@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Fruits Online</TITLE>
+</HEAD>
+<BODY bgcolor=#CCffCC>
+<CENTER><H1>We have these goodies</H1></CENTER>
+<HR>
+<FORM ACTION="http://localhost:8080/examples/servlet/Cart" METHOD="POST">
+<TABLE CELLSPACING="5" CELLPADDING="5">
+<TR>
+    <TD ALIGN="center"><B>Add to Cart</B></TD>
+    <TD ALIGN="center"></TD>
+    <TD ALIGN="center"></TD>
+</TR>
+<TR>
+    <TD ALIGN="center"><INPUT TYPE="Checkbox" 
+         NAME="item_a" VALUE="apple   $1"></TD>
+    <TD ALIGN="left">apple</TD>
+</TR>
+<TR>
+    <TD ALIGN="center"><INPUT TYPE="Checkbox"
+         NAME="item_b" VALUE="orange  $2"></TD>
+    <TD ALIGN="left">orange</TD>
+</TR>
+<TR>
+    <TD ALIGN="center"><INPUT TYPE="Checkbox" 
+         NAME="item_c" VALUE="pear    $3"></TD>
+    <TD ALIGN="left">pear</TD>
+</TR>
+</TABLE>
+<HR><BR>
+<CENTER>
+Press 
+<INPUT TYPE="Submit" NAME="Cart1_submit" VALUE="Submit">
+to submit your order.
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

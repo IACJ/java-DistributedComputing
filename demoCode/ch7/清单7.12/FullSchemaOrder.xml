@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone=”yes”?>
+
+<xsd:Schema
+	targetNamespace="http://www.Transactions.com/Order"
+	xmlns xsd="http://www.w3.org/2000/08/XMLSchema">
+	
+	<xsd:description>订单的全部信息</xsd:description>
+	<xsd:element name="订单" type=“订单类型”/>
+	<xsd:element name="描述" type="string"/>
+	
+	<xsd:complexType name="订单类型">
+		<xsd:sequence>
+			<xsd:element name="订单编号" type="string"/>
+			<xsd:element name="客户地址" type="地址"/>
+			<xsd:element name="供应商地址" type="地址"/>
+			<xsd:element des="描述" minOccurs="0"/>
+			<xsd:element name="所有商品" type="商品类型"/>
+			<xsd:element name="总额" type="float"/>
+			<xsd:element name="发货时间" type="date"/>
+		</xsd:sequence>
+		<xsd:attribute name="订单日期" type="date"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="地址">
+		<xsd:sequence>
+			<xsd:element name="单位名称" type="string"/>
+			<xsd:element name="街道" type="string"/>
+			<xsd:element name="城市" type="string"/>
+			<xsd:element name="省份" type="string"/>
+			<xsd:element name="邮编" type="decimal"/>
+		</xsd:sequence>
+		<xsd:attribute name="国家" type="NMTOKEN" use="fixed" value="中国"/>
+	</xsd:complexType>
+	
+	<xsd:description>订单中商品的信息</xsd:description>
+	<xsd:compelxType name="商品类型">
+		<xsd:sequence>
+			<element name="商品" minOccurs="0" maxOccurs="unbouned">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="商品名称" type=“string”/>
+						<xsd:element name="类别" type=“string”/>
+						<xsd:element name="单价" type="float"/>
+						<xsd:element name="数量">
+							<xsd:simpleType>
+								<xsd:resriction base="positiveInteger">
+									<maxExclusive value="100"/>
+								</xsd:resriction>
+							</xsd:simpleType>
+						</xsd:element>	
+						<xsd:element des="说明" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:compelxType>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:Schema>

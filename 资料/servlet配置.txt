@@ -1,0 +1,14 @@
+1)加载软件包 javax.servlet:
+      找到%tomcat%\common\lib目录下的servlet-api.jar，把这个jar添加到%java_home%\jdk1.6.0\jre\lib\ext目录下面，不同的jdk版本都一样。
+
+
+
+2)在web.xml中添加servlet配置信息       
+	<servlet> 
+		<servlet-name>GetForm</servlet-name> 
+		<servlet-class>GetForm</servlet-class> 
+	</servlet> 
+	<servlet-mapping> 
+		<servlet-name>GetForm</servlet-name>
+		<url-pattern>/servlet/GetForm</url-pattern> 
+	</servlet-mapping> 

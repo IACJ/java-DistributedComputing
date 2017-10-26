@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TestServiceClient"
+  id="myeclipse.1366952721563"
+  context-root="/TestServiceClient"
+  j2ee-spec="6.0"
+  archive="TestServiceClient.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

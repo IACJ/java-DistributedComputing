@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone=”yes”?>
+
+<SmartPhoneList>
+	<SmartPhone>
+		<Name>SP S5</Name>
+		<Screen>4.7</Screen>
+		<CPU>1.7GHZ</CPU>
+		<OS>Android 4.0</OS>
+		<Carmer>800W</Carmer>
+		<Battery>1800mah</Battery>
+		<Price>3200</Price>
+	</SmartPhone>
+		<SmartPhone>
+		<Name>LEN Q10</Name>
+		<Screen>4.3</Screen>
+		<CPU>1.2GHZ</CPU>
+		<OS>Android 4.0</OS>
+		<Carmer>1200W</Carmer>
+		<Battery>1880mah</Battery>
+		<Price>2800</Price>
+	</SmartPhone>
+</SmartPhoneList>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0">
+
+  <xs:element name="checkTrain" type="tns:checkTrain"/>
+
+  <xs:element name="checkTrainResponse" type="tns:checkTrainResponse"/>
+
+  <xs:complexType name="checkTrain">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkTrainResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:train"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="train">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="destination" type="xs:string"/>
+      <xs:element name="price" type="xs:float"/>
+      <xs:element minOccurs="0" name="reachTime" type="xs:string"/>
+      <xs:element name="remainder" type="xs:int"/>
+      <xs:element minOccurs="0" name="startPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="startTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="trainNum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

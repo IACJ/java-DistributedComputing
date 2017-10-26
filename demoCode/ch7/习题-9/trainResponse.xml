@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soap:Envelope
+	xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	soap:encodingStyle="http://www/w3/org/2003/05/soap-encoding">
+	<soap:body>
+		<t:getTrainInfoResponse
+			xmlns:t="http://www.trians.org/info">
+			<t:trains>
+			  <train>
+				  <trainNum>D3052</trainNum>
+				  <startPlace>上海虹桥</startPlace>
+				  <startTime>2013-07-18 10:54</startTime>
+				  <destination>武昌</destination>
+			      <reachTime>2013-07-18 16:50</reachTime>
+			      <price>254.0</price>
+			      <remainder>52</remainder>
+			  </train>
+			</t:trains>
+		</t:getTrainInfoResponse>
+	</soap:body>
+</soap:Envelope>

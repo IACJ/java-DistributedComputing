@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CheckTrain"
+  id="myeclipse.1375488620707"
+  context-root="/CheckTrain"
+  j2ee-spec="6.0"
+  archive="CheckTrain.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

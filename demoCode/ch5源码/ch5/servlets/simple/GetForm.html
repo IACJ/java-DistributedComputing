@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<title>A Web form servlet</title>
+</head>
+<body>
+
+<H1>This is a simple form which invokes a servlet</H1>
+<P>
+This is a sample form which demonstrates the use of
+web form processing using a Java servlet.
+<P>
+<font color = red>
+<HR>
+<form method="get" action="http://localhost:8080/examples/servlet/GetForm">
+<H2> Pop Quiz: </H2>
+What is thy name: <input name="name"><P>
+What is thy quest: <input name="quest"><P>
+
+What is thy favorite color:
+ <select name="color">
+ <option selected>chartreuse
+ <option>azure
+ <option>puce
+ <option>cornflower
+ <option>olive draub
+ <option>gunmetal
+ <option>indigo2
+ <option>blanched almond
+ <option>flesh
+ <option>ochre
+ <option>opal
+ <option>amber
+ <option>mustard
+ </select>
+<P>
+
+What is the weight of a swallow: <input type="radio" name="swallow"
+value="african" checked> African Swallow or
+<input type="radio" name="swallow" value="continental"> Continental
+Swallow
+<P>
+
+What do you have to say for yourself
+<textarea name="text" rows=5 cols=60></textarea>
+<P>
+
+Press <input type="submit" value="here"> to submit your query.
+</form>
+
+<hr>
+</body>
+</html>
+

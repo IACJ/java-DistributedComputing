@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soap:Envelope
+	xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+	soap:encodingStyle="http://www/w3/org/2003/05/soap-encoding">
+	<soap:body>
+		<t:getTrainInfo
+			xmlns:t="http://www.trians.org/info">
+			<t:startPlace>上海虹桥</t:startPlace>
+			<t:destination>武昌</t:destination>
+			<t:time>2013/07/18</t:time>
+		</t:getTrainInfo>
+	</soap:body>
+</soap:Envelope>
