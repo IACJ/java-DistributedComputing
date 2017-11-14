@@ -1,2 +1,0 @@
-java HelloServer
-pause

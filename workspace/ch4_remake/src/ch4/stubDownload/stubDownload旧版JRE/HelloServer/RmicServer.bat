@@ -1,2 +1,0 @@
-rmic HelloImpl
-pause

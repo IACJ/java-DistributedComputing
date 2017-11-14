@@ -1,0 +1,40 @@
+package com.acj.rmi.client;
+
+import java.net.MalformedURLException;
+import java.rmi.ConnectException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+
+import com.acj.rmi.server.IHello;
+import com.acj.rmi.server.IStudentInfo;
+import com.acj.rmi.server.Student;
+
+public class Client { 
+    public static void main(String args[]){ 
+        try { 
+            //在RMI服务注册表中查找名称为RHello的对象，并调用其上的方法 
+//            IHello rhello =(IHello) Naming.lookup("rmi://localhost:8888/RHello"); 
+            IStudentInfo rStudentInfo =(IStudentInfo) Naming.lookup("rmi://localhost:8888/RStudentInfo"); 
+//            System.out.println(rhello.helloWorld()); 
+//            System.out.println(rhello.sayHelloToSomeBody("你好")); 
+
+            Student student = new Student((long) 1,"小贾",100);
+            System.out.println(rStudentInfo.postStu(student));
+            System.out.println(rStudentInfo.list());
+            System.out.println(rStudentInfo.getStu((long) 1));
+            
+            
+        } catch(ConnectException e){
+        	e.printStackTrace(); 
+        	System.out.println("发生异常：java.rmi.ConnectException ");
+        	System.out.println("可能原因：你大概没开服务器？ ");
+        }catch (NotBoundException e) { 
+            e.printStackTrace(); 
+        } catch (MalformedURLException e) { 
+            e.printStackTrace(); 
+        } catch (RemoteException e) { 
+            e.printStackTrace();   
+        } 
+    } 
+}

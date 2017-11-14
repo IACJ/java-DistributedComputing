@@ -1,0 +1,11 @@
+package com.acj.rmi.server;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface IStudentInfo extends Remote{
+
+	 public String list() throws RemoteException; 
+	 
+	 public String id() throws RemoteException; 
+}

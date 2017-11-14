@@ -1,0 +1,11 @@
+package com.acj.rmi.server;
+
+public class Student { 
+	 
+    private Long id; 
+    private String name; 
+    private Integer age; 
+ 
+    // Ê¡ÂÔsetterºÍgetter 
+     
+}
