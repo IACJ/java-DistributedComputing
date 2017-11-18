@@ -31,7 +31,7 @@
 			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="-50" key="DIALOG_X_ORIGIN"/>
-			<item value="-53" key="DIALOG_Y_ORIGIN"/>
+			<item value="-9" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">

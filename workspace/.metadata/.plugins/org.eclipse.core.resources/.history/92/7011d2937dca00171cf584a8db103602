@@ -1,0 +1,55 @@
+package com.acj.sock;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.SocketException;
+
+public class MyStreamSocket {
+	
+	   private Socket  socket;
+	   private BufferedReader input;
+	   private PrintWriter output;
+	   private DataOutputStream dos;
+	   
+	   MyStreamSocket(String serverIp,
+	             		int acceptorPort ) throws SocketException, IOException{
+	      socket = new Socket(serverIp, acceptorPort );
+	      setStreams( );
+	   }
+	   MyStreamSocket(Socket socket)  throws IOException {
+	      this.socket = socket;
+	      setStreams( );
+	   }
+	   private void setStreams( ) throws IOException{
+	      InputStream inStream = socket.getInputStream();
+	      input = new BufferedReader(new InputStreamReader(inStream));
+	      OutputStream outStream = socket.getOutputStream();
+	      output = new PrintWriter(new OutputStreamWriter(outStream));
+	      dos = new DataOutputStream(socket.getOutputStream());
+	   }
+	   public void sendMessage(String message) throws IOException {	
+	      output.println(message);   
+	      output.flush();               
+	   } 
+	   public String receiveMessage( ) throws IOException {	
+	      String message = input.readLine( );  
+	      return message;
+	   } 
+	   public void close(){
+		   try {
+			socket.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	   }
+
+}

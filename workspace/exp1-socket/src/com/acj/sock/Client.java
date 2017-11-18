@@ -1,75 +1,82 @@
 package com.acj.sock;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
+import java.io.RandomAccessFile;
+import java.net.ConnectException;
 
 public class Client {
     
     private static final String SERVER_IP = "127.0.0.1";
     private static final int SERVER_PORT = 2017;
     
-    private Socket serverSock;
+    private MyStreamSocket cSock;
     
     public Client(){
     	try {
     		try {	
-				serverSock = new Socket(SERVER_IP, SERVER_PORT);
-				
-				// 向服务器请求文件
-				/** 发送客户端准备传输的信息 */
-				// 由Socket对象得到输出流，并构造PrintWriter对象
-				PrintWriter printWriter = new PrintWriter(serverSock.getOutputStream(), true);
-				// 将输入读入的字符串输出到Server
+				cSock = new MyStreamSocket(SERVER_IP, SERVER_PORT);
+	
 				print("请输入你想请求的文件");
-				BufferedReader sysBuff = new BufferedReader(new InputStreamReader(System.in));
-				printWriter.println(sysBuff.readLine());
-				// 刷新输出流，使Server马上收到该字符串
-				printWriter.flush();
+				BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+				cSock.sendMessage(br.readLine());
 				
-				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(serverSock.getInputStream()));
-		        // 获取从客户端读入的字符串
-		        String result = bufferedReader.readLine();
-		        print(result);
-		        if (result == "False"){
+		        String msg = cSock.receiveMessage();
+		        if ( "False".equals(msg)){
 		        	print("找不到该文件，文件名无效");
 		        	return;
+		        }else{
+		        	print("请等待...");
 		        }
-				
-				/**开始接收文件*/
-				DataInputStream dis = new DataInputStream(serverSock.getInputStream());
-				//文件名和长度
-				String fileName = dis.readUTF();
-				long fileLength = dis.readLong();
-				FileOutputStream fos = new FileOutputStream(new File("c:/test/oo" + fileName));
-				  
+		        String fileName = cSock.receiveMessage();
+		        long fileLength = Long.parseLong(cSock.receiveMessage());
+		        
+		        int breakpoint = 0;			
+				File file = new File("c:/test/out_"+fileName+".mytemp");
+				if(file.exists()){  
+					breakpoint = (int) file.length();  
+		        }  
+		        cSock.sendMessage(breakpoint+"");
+		        
+		        RandomAccessFile access = new RandomAccessFile(file,"rw");
+		        /**开始接收文件*/
+		        access.skipBytes(breakpoint);
+		        
 				byte[] sendBytes = new byte[1024];
-				int transLen = 0;
-				print("----开始接收文件<" + fileName + ">,文件大小为<" + fileLength + ">----");
-				
+				long transLen = breakpoint;
 				while(true){
 					int read = 0;
-					read = dis.read(sendBytes);
+					read = cSock.receiveData(sendBytes);
 					if(read == -1){
 						break;
 					}
-						
 					transLen += read;
 					System.out.println("接收文件进度" + 100 * transLen/fileLength + "%...");
-					fos.write(sendBytes, 0, read);
-					fos.flush();
+					access.write(sendBytes, 0, read);
 				}
+				access.close();
+				if (fileLength == file.length()){
+					
+					File newFile = new File("c:/test/out_"+fileName);
+					int test = 0;
+					while(newFile.exists()){ 
+						test += 1;
+						newFile  =  new File("c:/test/out_("+test+")_"+fileName);
+				
+			        }  
+					file.renameTo(newFile); 
+					print("----接收文件<" + newFile + ">成功-------");
+				}else{
+					throw(new Exception("传输异常"));
+				}
+				
 				print("----接收文件<" + fileName + ">成功-------");
-				dis.close();
-				fos.close();
-            	} catch (Exception e) {
+            	} catch (ConnectException e) {
             		e.printStackTrace();
+            		print("你大概没开服务器");
             	}finally{
-                serverSock.close();
+            		cSock.close();
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,9 @@
+package com.acj.sock;
+
+public class ServerThread implements Runnable{
+
+	public ServerThread() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

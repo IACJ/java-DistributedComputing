@@ -2,4 +2,5 @@
 <typeInfoHistroy>
 <typeInfo handle="=exp2-RMI/C:\/Program Files\/Java\/jdk1.8.0_101\/jre\/lib\/rt.jar&lt;java.rmi.server(UnicastRemoteObject.class[UnicastRemoteObject" modifiers="33" timestamp="1472787574961"/>
 <typeInfo handle="=exp2-RMI/src&lt;com.acj.rmi.server{IStudentInfo.java[IStudentInfo" modifiers="513" timestamp="1510196964411"/>
+<typeInfo handle="=exp1-socket/C:\/Program Files\/Java\/jdk1.8.0_101\/jre\/lib\/rt.jar&lt;java.net(Socket.class[Socket" modifiers="33" timestamp="1472787574961"/>
 </typeInfoHistroy>
