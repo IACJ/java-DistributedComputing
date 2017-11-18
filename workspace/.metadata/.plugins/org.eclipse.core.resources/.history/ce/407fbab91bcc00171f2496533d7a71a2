@@ -71,6 +71,7 @@ public class Client {
 					throw(new Exception("传输异常"));
 				}
 				
+				print("----接收文件<" + fileName + ">成功-------");
             	} catch (ConnectException e) {
             		e.printStackTrace();
             		print("你大概没开服务器");

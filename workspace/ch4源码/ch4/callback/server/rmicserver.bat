@@ -1,2 +1,0 @@
-rmic CallbackServerImpl
-pause
