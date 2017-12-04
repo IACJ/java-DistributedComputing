@@ -1,0 +1,8 @@
+package com.acj.rmi;
+
+import java.rmi.Remote;
+
+public interface HelloInterface extends Remote {
+
+	public String sayHello(String name) throw RemoteException;
+}

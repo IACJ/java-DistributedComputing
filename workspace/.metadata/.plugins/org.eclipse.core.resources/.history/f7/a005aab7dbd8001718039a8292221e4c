@@ -1,0 +1,19 @@
+package com.acj.rmi;
+
+import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
+
+public class Server {
+	public static void main(String[] args) {
+		try{
+			final int PORT = 1234;
+			LocateRegistry.createRegistry(PORT);
+			
+			HelloInterface hello = new HelloImpl();
+			Naming.rebind("rmi://localhost:"+PORT+"/hello", hello);
+			
+			
+			
+		}
+	}
+}

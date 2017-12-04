@@ -1,0 +1,17 @@
+package com.acj.rmi;
+
+import java.rmi.Naming;
+
+public class Client {
+	public static void main(String[] args) {
+		try{
+			final int PORT = 1234;
+			HelloInterface hello = (HelloInterface)Naming.lookup("rmi://localhost:"+PORT+"/hello");
+			
+			hello.sayHello("ACJ");
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

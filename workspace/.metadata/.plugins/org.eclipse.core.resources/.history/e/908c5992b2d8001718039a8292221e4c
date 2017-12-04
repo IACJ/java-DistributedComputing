@@ -1,0 +1,12 @@
+package com.acj.socket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		final int PROT = 1234;
+		final int MAX_LEN = 100;
+		
+
+	}
+
+}

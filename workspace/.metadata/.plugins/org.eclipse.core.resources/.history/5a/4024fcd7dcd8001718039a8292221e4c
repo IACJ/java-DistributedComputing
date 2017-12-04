@@ -1,0 +1,13 @@
+package com.acj.rmi;
+
+public class Client {
+	public static void main(String[] args) {
+		try{
+			final int PORT = 1234;
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

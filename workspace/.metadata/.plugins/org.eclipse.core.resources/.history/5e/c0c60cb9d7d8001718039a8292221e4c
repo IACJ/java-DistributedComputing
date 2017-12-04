@@ -1,0 +1,13 @@
+package com.acj.streamsocket;
+
+public class Client {
+	
+	public static void main(String[] args) {
+		try{
+			final String HOST = "localhost";
+			
+			
+		}
+	}
+
+}

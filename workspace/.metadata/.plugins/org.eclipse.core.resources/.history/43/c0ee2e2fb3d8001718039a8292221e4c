@@ -1,0 +1,25 @@
+package com.acj.socket;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		final int PROT = 1234;
+		final int MAX_LEN = 100;
+		try{
+			DatagramSocket mySocket = new DatagramSocket(PROT);
+			byte[] buffer = new byte[MAX_LEN];
+			DatagramPacket dp = new DatagramPacket(buffer,MAX_LEN);
+			
+			mySocket.receive(dp);
+			System.out.println(buffer);
+			mySocket.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}

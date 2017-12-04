@@ -1,0 +1,20 @@
+package com.acj.datagramsocket;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class Client {
+
+	public static void main(String[] args) {
+		final int PORT = 1234;
+		final InetAddress HOST = InetAddress.getByName("localhost");
+		try{
+			DatagramSocket mySocket = new DatagramSocket();
+			String message = "hello";
+			byte[] buffer = message.getBytes();
+			DatagramPacket dp = new DatagramPacket(buffer,buffer.length,HOST,PORT);
+			mySocket.send(dp);
+		}
+	}
+}

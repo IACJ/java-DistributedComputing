@@ -1,0 +1,7 @@
+package com.acj.rmi;
+
+import java.rmi.server.UnicastRemoteObject;
+
+public class HelloImpl extends UnicastRemoteObject implements HelloInterface{
+
+}

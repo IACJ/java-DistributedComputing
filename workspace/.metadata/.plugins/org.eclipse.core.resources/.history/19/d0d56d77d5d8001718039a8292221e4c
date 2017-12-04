@@ -1,0 +1,27 @@
+package com.acj.streamsocket;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class MyStreamSocket {
+
+	private Socket socket;
+	private BufferedReader br;
+	private PrintWriter pw;
+	
+	MyStreamSocket (Socket socket){
+		this.socket = socket;
+		setSrteams();
+	}
+	
+	MyStreamSocket(String host, int port){
+		socket = new Socket(host,port);
+	}
+
+	private void setSrteams() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

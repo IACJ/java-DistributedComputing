@@ -1,0 +1,6 @@
+package com.acj.rmi;
+
+public interface HelloInterface {
+
+	public String sayHello(String name);
+}

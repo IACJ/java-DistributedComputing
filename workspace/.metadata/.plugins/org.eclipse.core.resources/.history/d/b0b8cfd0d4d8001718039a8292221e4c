@@ -1,0 +1,9 @@
+package com.acj.streamsocket;
+
+import java.net.Socket;
+
+public class MyStreamSocket {
+
+	private Socket socket;
+	
+}

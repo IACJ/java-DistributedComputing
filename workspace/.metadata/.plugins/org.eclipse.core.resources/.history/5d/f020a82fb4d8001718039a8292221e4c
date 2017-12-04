@@ -1,0 +1,18 @@
+package com.acj.datagramsocket;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class Client {
+
+	public static void main(String[] args) {
+		final int PORT = 1234;
+		
+		try{
+			DatagramSocket mySocket = new DatagramSocket();
+			String message = "hello";
+			byte[] buffer = message.getBytes();
+			DatagramPacket pd = new DatagramPacket(buffer,buffer.length,HOST,PORT);
+		}
+	}
+}

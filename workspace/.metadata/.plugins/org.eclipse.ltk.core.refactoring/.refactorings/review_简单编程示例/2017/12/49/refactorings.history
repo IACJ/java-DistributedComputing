@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.acj.socket&apos; to &apos;com.acj.datagramsocket&apos;&#x0D;&#x0A;- Original project: &apos;review_DatagramSocket&apos;&#x0D;&#x0A;- Original element: &apos;review_DatagramSocket/src/com.acj.socket&apos;&#x0D;&#x0A;- Renamed element: &apos;review_DatagramSocket/src/com.acj.datagramsocket&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.acj.socket&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.acj.socket" name="com.acj.datagramsocket" qualified="false" references="true" stamp="1512365119915" textual="false" version="1.0"/>
+</session>

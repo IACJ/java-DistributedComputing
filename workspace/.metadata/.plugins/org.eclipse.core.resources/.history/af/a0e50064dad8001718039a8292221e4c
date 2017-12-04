@@ -1,0 +1,5 @@
+package com.acj.rmi;
+
+public class Server {
+
+}

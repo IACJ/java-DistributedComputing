@@ -1,0 +1,9 @@
+package com.acj.datagramsocket;
+
+public class Client {
+
+	public static void main(String[] args) {
+		final int PORT = 1234;
+		
+	}
+}

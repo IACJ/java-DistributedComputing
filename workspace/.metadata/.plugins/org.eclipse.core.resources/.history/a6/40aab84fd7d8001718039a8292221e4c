@@ -1,0 +1,18 @@
+package com.acj.streamsocket;
+
+import java.net.ServerSocket;
+
+public class Server {
+	
+	public static void main(String[] args) {
+		try{
+			final int PORT = 1234;
+			ServerSocket serverSockt = new ServerSocket(PORT);
+			MyStreamSocket mySocket = serverSocket
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}
